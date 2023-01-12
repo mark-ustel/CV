@@ -1,0 +1,518 @@
+<!doctype html>
+<html>
+<head>
+	<style>
+		
+		:root {
+			--toWhite-1: #325065;
+			--toWhite-2: #5a7081;
+			--toWhite-3: #81929f;
+			--toWhite-4: #aab5be;
+			--toWhite-5: #d4d9de;
+			--prussianBlue: #003249;
+			--toBlack-1: #072b3d;
+			--toBlack-2: #0b2332;
+			--toBlack-3: #0c1c27;
+			--toBlack-4: #0b151c;
+			--toBlack-5: #060c11;
+		}
+		
+		@media print {
+    /*html, page{
+        width: 210;
+        height: 297mm;
+        margin: 0mm;
+   } */
+	.sidebar{
+		background: rgb(180,184,185);
+	}
+}
+
+		body {
+		  background: rgb(204,204,204); 
+		  font-family: Helvetica;
+		}
+
+		page {
+		  background: white;
+		  display: block;
+		  margin: 0 auto;
+		  margin-bottom: 0.5cm;
+		  box-shadow: 1cm 1cm 2cm rgba(0,0,0,0.95);
+		  
+		}
+
+		page[size="A4"] {  
+		  width: 210mm;
+		  height: 297mm; 
+		}
+
+		.header{
+		  /*background: rgba(98,95,38, 0.7);*/
+			background: var(--toBlack-3);
+		  height: 21mm;
+		  width: 210mm;
+		}
+		
+		.sidebar{
+			/*background: rgb(180,184,185);
+			background: linear-gradient(105deg, 
+			  rgba(101,107,108,0.95) ,
+			  rgba(150,155,158,0.9) , 
+			  rgba(98,95,38,0.5) );*/
+			background: linear-gradient(105deg, 
+				var(--toWhite-4) , 
+				var(--toWhite-3) ,  
+				var(--toWhite-1) 
+			);
+			height: 271mm;
+			width: 44mm;
+			position: absolute;
+			padding-top: 5mm;
+			padding-left: 3mm;
+			color: white;
+		}
+		
+		.main{
+			padding-left: 4mm;
+			margin-left: 47mm;
+			height: 274mm;
+			background: white;
+			/*border: 1px solid red;*/
+		}
+		
+		h5{
+			padding-left: 0px;
+			font-weight: 900;
+			margin: 1mm;
+		}
+		
+		.row{
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			
+		}
+		
+		.separator{
+			width: 154.6mm;
+			display: flex;
+			flex-direction: row;
+			padding-bottom:2mm;
+		}
+		
+		h3{
+			margin: 0mm 7mm 1mm 0;
+			width: 154.6mm;
+			font-size: 14px;
+			padding: -0px 0 0.5mm 0;
+			color: var(--toBlack-1);
+		}
+		
+		h4{
+			margin: 0;
+			font-size: 13px;
+		}
+		
+		.left{
+			text-align: left;
+			font-size: 12px !important;
+			width: 138mm;
+			color: var(--toBlack-3);
+			/*border: 1px solid red;*/
+		}
+		
+		.right{
+			text-align: right;
+			width: 54.6mm;
+			font-style: italic;
+			font-weight: normal;
+			padding-top: 0.1mm;
+			font-size: 11px;
+			border-left: 1px solid var(--toWhite-5);
+			color: var(--toWhite-1);
+		}
+		
+				
+		.img{
+			width: 16mm;
+			height: 16mm;
+			border-radius: 50%;
+			border: 3px solid var(--toWhite-2);
+			margin-top: -4mm !important;
+			margin-right: 2mm !important;
+		}
+		
+		.img:hover{
+			box-shadow: 0.12cm 0.12cm 0.3cm var(--toWhite-4);
+		}
+
+		
+		
+		ul {
+			margin: 0;
+			padding-bottom: 4mm;
+			list-style: none;
+			width: 144mm;
+			font-size: 12px !important;
+			
+		}
+
+		ul li:before
+		{
+			content: '\00BB';
+			color: grey;
+			padding: 0;
+			margin: 0px 3mm 0px -5mm;
+		}
+		
+		li{
+			/*border: 1px solid yellow;*/
+			padding-bottom: 0.5mm;
+		}
+		
+		.icon{
+			/*border: 1px solid white;*/
+			width: 6mm;
+			text-align: center;
+			padding: 1mm;
+			font-size: 12px;
+		}	
+		
+		.iconText{
+			/*border: 1px solid white;*/
+			text-align: left;
+			justify-content: none;
+			padding-left: 3mm;
+			padding-top: 1.5mm;
+			width: 30mm;
+			font-size: 10px;
+		}
+		
+		.pseudolink:hover{ 
+		    color: var(--toBlack-2); 
+			cursor:pointer; 
+			text-shadow: 0 0 2mm white;
+			
+
+		}
+		
+		.side-hr{
+			width: 36mm;
+			padding: 0mm !important;
+			margin-left: 2mm;
+		}
+		
+		h6{
+			margin: 1mm;
+			margin-top: 3.5mm;
+
+		}
+		
+		p{
+			margin: 0;
+		}
+		
+		.summary{
+			padding-bottom: 3mm;
+		}
+		
+		.skills{
+			/*border: 1px solid white;*/
+			width: 41mm;
+			font-size: 10px;
+			margin-left: 1.3mm;
+		}
+
+
+h1{
+  text-align: center;
+  color: white;
+  font-size: 2.5em;
+  margin: 0px;
+  padding-top:4.5mm;
+}	
+		
+		.footer{
+			text-align: right;
+			font-size: 8px;
+			color: var(--toWhite-4);
+			padding-right: 2mm;
+			margin-top: -1mm;
+		}
+		
+		
+a {
+  color:#fff;
+  border-radius:1mm;
+  text-align:center;
+  text-decoration:none;
+  font-family:fontawesome;
+  position: relative;
+  display: inline-block;
+  width:7mm;
+  height:8mm;
+  padding-top:0mm;
+  margin:1.2mm;
+  -o-transition:all .5s;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  transition: all .5s;
+   -webkit-font-smoothing: antialiased;
+}
+
+a:hover {
+	text-shadow: 0 0 1.5mm white;
+}
+
+/* pop-up text */
+a span {;
+  color:#666;
+  position:absolute;
+  font-family:sans-serif;
+  bottom:0;
+  left:-5mm;
+  right:-5mm;
+  padding:1mm 2mm;
+  z-index:1;
+  font-size:10px;
+  border-radius:3mm;
+  background:#fff;
+  visibility:hidden;
+  -o-transition:all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+/* text pops up when icon is in hover state */
+a:hover span {
+	
+  bottom:10mm;
+  visibility:visible;
+  opacity:0.85;
+}
+
+/* font awesome icons */
+a:nth-of-type(1):before {
+content:'\f02f';
+}
+a:nth-of-type(2):before {
+content:'\f56d';
+}
+a:nth-of-type(3):before {
+content:'\f08c';
+}
+a:nth-of-type(4):before {
+content:'\f09b';
+}</style>
+
+	<!--<link rel="stylesheet" href="style.css">-->
+
+<meta charset="utf-8">
+<script src="https://kit.fontawesome.com/c131cf1607.js" crossorigin="anonymous"></script>
+	
+<title>MarkUstel</title>
+</head>
+
+<body>
+  <page size="A4">
+    
+    <div class="header">
+		<h1>Mark Ustel</h1>
+    </div>
+    
+    <div class="sidebar">
+		
+		<h5>Contact Me</h5>
+		<br>
+		
+		<div class="row">
+			<div class="icon">
+				<i class="fa-solid fa-circle-user"></i>
+			</div>
+			<div class="iconText">
+				 He / Him
+			</div>		
+		</div>
+		
+		<div class="row">
+			<div class="icon">
+				<i class="fa-solid fa-phone"></i>
+			</div>
+			<div class="iconText">
+				 07702834298
+			</div>		
+		</div>
+		
+		<div class="row">
+			<div class="icon">
+				<i class="fa-regular fa-envelope-open"></i>
+			</div>
+			<div class="iconText">
+				<!--<a href="mailto:mark.ustel@gmail.com">mark.ustel@gmail.com</a>-->
+			  <span 
+				   class="pseudolink" 
+				   onclick="location='mailto:mark.ustel@gmail.com'">
+				mark.ustel@gmail.com
+			  </span>
+
+
+			</div>		
+		</div>
+
+		
+		<div class="row">
+			<div class="icon">
+				<i class="fa-solid fa-location-dot"></i>
+			</div>
+			<div class="iconText">
+				Harlow, Essex, UK
+			</div>
+		</div>		
+		
+		<br>
+		<hr class="side-hr">
+		<br>
+		<h5>Education</h5>
+		<p class="skills"><b>Bachelor of Engineering</b></p>
+		<p class="skills"><i><small>University of Hertfordshire</small></i></p>
+		<p class="skills"><i>2003 - 2006</i></p>
+		<br>
+		<h5>Skills</h5>
+		<h6>Empathise</h6>
+		<p class="skills">UX, Design Thinking, CX</p>
+		<h6>Data Acquisition</h6>
+		<p class="skills">SQL, Hive, Hadoop, Web Scraping, APIs, Telematics</p>
+		<h6>Data Preparation</h6>
+		<p class="skills">R, Python, Alteryx, Statistical, Explanatory Data Aanlysis</p>
+		<h6>Modelling</h6>
+		<p class="skills">Regression, Image Recognition, Machine Learning, Natural Langauge Processing, Data Robot</p>
+		<h6>Evaluation</h6>
+		<p class="skills">Hypothesis Testing, Probabillity Distribution, Correlation Matrix, Confusion Matrix</p>
+		<h6>Visualisation</h6>
+		<p class="skills">Story Telling, Tableau, QlikView/Sense, Shiny</p>
+		<h6>Deployment</h6>
+		<p class="skills">Markdown , Quarto, Google Cloud, GitHub, Rstudio Connect</p>
+		
+		<br>
+		<hr class="side-hr">
+		<br>
+		<h5>Community Engagement</h5>
+		<h6>STEM</h6>
+		<p class="skills">An active STEM ambassador for several years, and have parcipiated in Primary Egnineer for the previous five years</p>
+		<h6>Vounteering</h6>
+		<p class="skills">Hosted the Ho-Ho-Hospice event for the previous three years</p><br>
+		<p class="skills">Provide education and career via public speaking events through Future First</p>
+		
+		<br>
+		<hr class="side-hr">
+		<br>
+		
+		<div>
+		  <a class="popup" href="javascript:window.print()"><span>Print</span></a>
+		  <a class="popup" href="MarkUstel.pdf" download="MarkUstek" target="_blank"><span>Download a PDF copy</span></a>
+		  <a class="popup" href="https://linkedin.com/in/mark-ustel-1342b067" target="_blank"><span>Connect with me</span></a>
+		  <a class="popup" href="https://mark-ustel.github.io/me/" target="_blank"><span>Dashboard Version!</span></a>
+		</div>
+		
+		
+    </div>
+    
+    <div class="main">
+		<br>
+		<div class="separator">
+			<p class="left summary">
+		    Passionate and inquisitive analytically minded  <big>Data Scientist</big>, strongly believing in the infusion of Data Science with <big>Design Thinking</big>.  Combining strengths from both approaches ensures  focus on the customer and problem definition, whilst delivering a <big>creative</big> and highly <big>analytical</big> solution with tangible and quantifiable outcomes. An experienced user of both <big>R</big> and <big>Python</big>, having a strong bias towards R due to its superior statistical ability and interactive web apps in Shiny.</p>
+			
+			<p><a href="https://mark-ustel.github.io/me/" target="_blank"><img  class="img" src="me.jpg" alt="Image of Mark Ustel" title = "Visit my alternative CV"></a></p>
+			
+			
+		</div>
+		
+		<h3>Senior Data Scientist</h3>
+		<div class="separator">
+			<h4 class = "left">Ford - Connected Vehicles</h4>
+			<h4 class = "right">October-'20 to present</h4>
+		</div>
+		<ul>
+			<li>Developed a statistical based webapp that prevented £1M in buy backs</li>
+		  	<li>Delivered analysis to identify and support a $3M cost saving on a high performance vehicle</li>
+		  	<li>Scaled a dashboard from 10k vehicles to over 6M</li>
+			<li>Simplified an existing query and dashboard to aggregate all analytics, including regression modelling, server side which reduced the dataframe from over 650M to less than 3k</li>
+			<li>Spearheaded the cloud magration for query, analytics, machine larning and dashboarding</li>
+		</ul>
+		
+		<h3>Data Scientist</h3>
+	  <div class="separator">
+			<h4 class = "left">Ford - Innovation Lab</h4>
+			<h4 class = "right">April-'19 to October-'20</h4>
+		</div>
+		<ul>
+			<li>&nbsp;Improved project completion rate by 30%, and reduced project time by 2 months ultilising Design Thinking methodologies</li>
+		  	<li>Conceptualized machine learning (PCA) to identified  $45M  and delivered over $6M cost saving</li>
+		  	<li>Formulated a natural language processing algorithm to analyse over 17k ideas generated</li>
+			<li>Redesigned the interface for idea generation which doubled the number of ideas submitted whilst greatly enhancing customer satifiaction</li>
+		  	<li>Analysed and published a dashboard for diesel injector prognosis worth an estimated $2M</li>
+		</ul>
+		
+		<h3>Senior Data Analyst</h3>
+		<div class="separator">
+			<h4 class = "left">Ford - Engine Development</h4>
+			<h4 class = "right">March-'16 to April-'19</h4>
+		</div>
+		<ul>
+			<li>Proud inventor and author of a patent for Adaptively Controlling a Motor Vehicle Engine System</li>
+		  	<li>The first person to test, analyse and implement dual injection strategy on a European application at Ford which yielded a 1% improvement in fuel economy and a 7% uplift in torque</li>
+		  	<li>Created a tool to analyse overfuelling which enabled fuelling levels to be reduced by 12%</li>
+			<li>Ultilising big data and developing alogirthms helped successfully predict the hardware changes required to meet upcomping legislated C02 limits</li>
+		</ul>
+		
+		<h3>Data Analyst</h3>
+		<div class="separator">
+			<h4 class = "left">Ford - Engine Development</h4>
+			<h4 class = "right">August-'11 to March-'16</h4>
+		</div>
+		<ul>
+			<li>Invented a program to analyse and categorise fuel consumption delta that is still being utilised globally</li>
+		  	<li>Succesfully developed algorithms to identify dynamic valve events</li>
+		  	<li>Developed a software stragety to improve idle combustion stability by over 50%</li>
+			<li>Remotely investigated and resolved an assembly production error that caused the plant to shutdown for 10 days</li>
+		</ul>
+		
+		<h3>Systems Engineer Team Leader</h3>
+		<div class="separator">
+			<h4 class = "left">Delphi - Engine Testing</h4>
+			<h4 class = "right">February-'08 to July-'11</h4>
+		</div>
+		<ul>
+			<li>PID tuning enabled operating systems to have four times the lifespan</li>
+		  	<li>Created post processed and real time automated data quality checks saving over £2M</li>
+		  	<li>Developed a script that automatically writes test procedures saving over £115k pa</li>
+			<li>Implemented DOE testing strategy which reduced optimisation on a single cylinder engine by 2 months</li>
+		  	<li>Installed, configured and maintained systems which yielded a 15% increase in uptime and a £10k cost saving</li>
+			<li>Created and hosted several training courses in statistics and analytics</li>
+		</ul>
+		
+		<h3>Technical Author</h3>
+		<div class="separator">
+			<h4 class = "left">Boeing - CAD Integration</h4>
+			<h4 class = "right">September-07 to February-08</h4>
+		</div>
+		<ul>
+			<li>Instantiate parts in Enovia to ensure timely part procurement to reverse delays worth in excess of $100M</li>
+		  	<li>Interpretting engineering drawings to amend a variety of aircraft documentation</li>
+		  	<li>Authoring technical publications using Framemaker</li>
+		</ul>
+		<p class = "footer"><i>Made entirely with HTML, CSS and JavaScript</i></p>
+
+    </div>
+	  
+	  
+	  
+  </page>
+</body>
+
+
+</html>
