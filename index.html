@@ -18,12 +18,18 @@
 			--toBlack-5: #060c11;
 		}
 		
-		@media print {
-    html, page{
-        width: 210;
-        height: 297mm;
-        margin: 0mm;
-   }
+@media print {
+  @page {
+    margin: 0;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+		
 	.sidebar{
 		background: rgb(180,184,185);
 	}
